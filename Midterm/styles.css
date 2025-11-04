@@ -1,4 +1,12 @@
 
+/* ==========================================================
+   styles.css — Martinique Destination Site (VantageAvenir)
+   Fonts: Montserrat (headings) / Lora (body)
+   Palette: Celadon + warm accents
+   Layout: Responsive Flexbox & Grid system
+   ========================================================== */
+
+/* ===== Root & Fluid Type ===== */
 :root {
   --celadon: #BAF2D8;
   --deep: #0B3B2F;
@@ -20,7 +28,7 @@ html {
   box-sizing: inherit;
 }
 
-
+/* ===== Base Styles ===== */
 body {
   margin: 0;
   font-family: var(--body-font);
@@ -284,4 +292,3 @@ input[type="submit"]:hover {
   gap: 1rem;
   font-size: 0.95rem;
 }
-
