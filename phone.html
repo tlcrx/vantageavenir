@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Phone — Smart Infotainment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <!-- Shared header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top">
+        <svg class="logo" width="36" height="36" viewBox="0 0 24 24" aria-hidden>
+          <rect width="24" height="24" rx="5" fill="#072f2a"></rect>
+          <circle cx="7" cy="7" r="2.2" fill="#06b6d4"></circle>
+        </svg>
+        <div class="brand-text">
+          <h1>Smart Infotainment</h1>
+          <p class="byline">Prototype &amp; Wireframes — Triston LaCroix</p>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html#homescreen">Homescreen</a>
+        <a class="nav-link" href="index.html#creative-brief">Creative Brief</a>
+        <a class="nav-link" href="index.html#sitemap">Sitemap</a>
+        <a class="nav-link" href="index.html#wireframes">Wireframes</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel-section">
+      <h2 class="section-title">Phone</h2>
+
+      <div class="infotainment-frame phone-layout">
+        <!-- Left: Active call / keypad -->
+        <article class="card phone-main">
+          <header class="phone-header">
+            <div class="pill">Connected</div>
+            <div class="phone-status">Bluetooth • iPhone 15 Pro</div>
+          </header>
+
+          <!-- Active call mock -->
+          <div class="active-call">
+            <div class="avatar-circle">S</div>
+            <div class="active-meta">
+              <div class="active-name">Sarah Johnson</div>
+              <div class="active-label">Mobile • Ongoing</div>
+              <div class="active-timer">00:12</div>
+            </div>
+          </div>
+
+          <!-- Call controls -->
+          <div class="call-controls">
+            <button class="call-btn">
+              <span class="call-icon">🔇</span>
+              <span class="call-label">Mute</span>
+            </button>
+            <button class="call-btn">
+              <span class="call-icon">🔊</span>
+              <span class="call-label">Speaker</span>
+            </button>
+            <button class="call-btn">
+              <span class="call-icon">📱</span>
+              <span class="call-label">Device</span>
+            </button>
+            <button class="call-btn">
+              <span class="call-icon">➕</span>
+              <span class="call-label">Add</span>
+            </button>
+          </div>
+
+          <!-- Keypad -->
+          <div class="phone-keypad">
+            <button class="key">1<span class="sub"></span></button>
+            <button class="key">2<span class="sub">ABC</span></button>
+            <button class="key">3<span class="sub">DEF</span></button>
+            <button class="key">4<span class="sub">GHI</span></button>
+            <button class="key">5<span class="sub">JKL</span></button>
+            <button class="key">6<span class="sub">MNO</span></button>
+            <button class="key">7<span class="sub">PQRS</span></button>
+            <button class="key">8<span class="sub">TUV</span></button>
+            <button class="key">9<span class="sub">WXYZ</span></button>
+            <button class="key">*</button>
+            <button class="key">0<span class="sub">+</span></button>
+            <button class="key">#</button>
+          </div>
+
+          <div class="call-bottom">
+            <button class="end-call">End Call</button>
+          </div>
+        </article>
+
+        <!-- Right: Contacts / Recents -->
+        <aside class="card phone-side">
+          <section class="phone-section">
+            <h3 class="card-title">Favorites</h3>
+            <ul class="phone-list">
+              <li class="phone-item">
+                <div>
+                  <div class="phone-name">Sarah Johnson</div>
+                  <div class="phone-tag">Mobile</div>
+                </div>
+                <span class="phone-mini-btn">Call</span>
+              </li>
+              <li class="phone-item">
+                <div>
+                  <div class="phone-name">Home</div>
+                  <div class="phone-tag">Family • Home</div>
+                </div>
+                <span class="phone-mini-btn">Call</span>
+              </li>
+              <li class="phone-item">
+                <div>
+                  <div class="phone-name">Alex (Work)</div>
+                  <div class="phone-tag">Work • UX Lead</div>
+                </div>
+                <span class="phone-mini-btn">Call</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="phone-section">
+            <h3 class="card-title small">Recent Calls</h3>
+            <ul class="phone-list">
+              <li class="phone-item">
+                <div>
+                  <div class="phone-name">Dealership</div>
+                  <div class="phone-tag">Yesterday • 4:12 PM • 8 min</div>
+                </div>
+                <span class="phone-direction">⬆</span>
+              </li>
+              <li class="phone-item">
+                <div>
+                  <div class="phone-name">Mom</div>
+                  <div class="phone-tag">Today • 9:24 AM • 3 min</div>
+                </div>
+                <span class="phone-direction">⬇</span>
+              </li>
+              <li class="phone-item">
+                <div>
+                  <div class="phone-name">Service Center</div>
+                  <div class="phone-tag">Missed • 2 days ago</div>
+                </div>
+                <span class="phone-direction missed">✕</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="phone-section">
+            <h3 class="card-title small">Quick Actions</h3>
+            <div class="phone-actions">
+              <button class="phone-action-btn">View Contacts</button>
+              <button class="phone-action-btn ghost">Do Not Disturb</button>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <!-- bottom app nav -->
+      <div class="bottom-nav">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="navigate.html" class="nav-btn">Navigate</a>
+        <a href="music.html" class="nav-btn">Music</a>
+        <a href="phone.html" class="nav-btn active">Phone</a>
+        <a href="messages.html" class="nav-btn">Messages</a>
+        <a href="media.html" class="nav-btn">Media</a>
+        <a href="calendar.html" class="nav-btn">Calendar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Triston LaCroix — Smart Infotainment</div>
+      <div>Built with HTML &amp; CSS — Flexbox &amp; Grid</div>
+    </div>
+  </footer>
+</body>
+</html>
