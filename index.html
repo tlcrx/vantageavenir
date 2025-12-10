@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top">
@@ -45,7 +45,9 @@
         <div class="topbar">
           <div class="top-left">
             <!-- Home icon (SVG) -->
-            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path fill="#06b6d4" d="M12 3l8 7v10a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1V10z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden>
+              <path fill="#06b6d4" d="M12 3l8 7v10a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1V10z"/>
+            </svg>
             <span class="top-title">Home</span>
           </div>
 
@@ -56,9 +58,13 @@
           </div>
 
           <div class="top-right">
-            <!-- User / Settings / Search icons -->
-            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path fill="#9ca3af" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM3 21a9 9 0 1 1 18 0H3z"/></svg>
-            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path fill="#9ca3af" d="M12 8a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 8zm8 11H4v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z"/></svg>
+            <!-- User / Settings icons -->
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden>
+              <path fill="#9ca3af" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM3 21a9 9 0 1 1 18 0H3z"/>
+            </svg>
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden>
+              <path fill="#9ca3af" d="M12 8a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 8zm8 11H4v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z"/>
+            </svg>
           </div>
         </div>
 
@@ -105,7 +111,8 @@
                 </defs>
                 <rect width="320" height="200" fill="url(#grid)"/>
                 <path d="M40 160 Q120 120 200 100 T300 80" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="40" cy="160" r="4" fill="#06b6d4"/><circle cx="300" cy="80" r="4" fill="#06b6d4"/>
+                <circle cx="40" cy="160" r="4" fill="#06b6d4"/>
+                <circle cx="300" cy="80" r="4" fill="#06b6d4"/>
               </svg>
             </div>
 
@@ -150,12 +157,13 @@
         <!-- Shortcuts + Notifications Row -->
         <div class="short-row">
           <div class="shortcuts">
-            <button class="shortcut">Navigate</button>
-            <button class="shortcut">Music</button>
-            <button class="shortcut">Phone</button>
-            <button class="shortcut">Messages</button>
-            <button class="shortcut">Media</button>
-            <button class="shortcut">Calendar</button>
+            <!-- these now go to real pages -->
+            <a href="navigate.html" class="shortcut">Navigate</a>
+            <a href="music.html" class="shortcut">Music</a>
+            <a href="phone.html" class="shortcut">Phone</a>
+            <a href="messages.html" class="shortcut">Messages</a>
+            <a href="media.html" class="shortcut">Media</a>
+            <a href="calendar.html" class="shortcut">Calendar</a>
           </div>
 
           <div class="notifications card">
@@ -170,13 +178,13 @@
 
         <!-- Bottom navigation -->
         <div class="bottom-nav">
-          <button class="nav-btn active">Home</button>
-          <button class="nav-btn">Navigate</button>
-          <button class="nav-btn">Media</button>
-          <button class="nav-btn">Phone</button>
-          <button class="nav-btn">Climate</button>
-          <button class="nav-btn">Vehicle</button>
-          <button class="nav-btn">Settings</button>
+          <a href="index.html" class="nav-btn active">Home</a>
+          <a href="navigate.html" class="nav-btn">Navigate</a>
+          <a href="music.html" class="nav-btn">Music</a>
+          <a href="phone.html" class="nav-btn">Phone</a>
+          <a href="messages.html" class="nav-btn">Messages</a>
+          <a href="media.html" class="nav-btn">Media</a>
+          <a href="calendar.html" class="nav-btn">Calendar</a>
         </div>
       </div>
     </section>
@@ -205,7 +213,7 @@
           <h3>Key Messages</h3>
           <ul>
             <li>Clear vehicle insight at a glance</li>
-            <li>Quick access to navigation & media</li>
+            <li>Quick access to navigation &amp; media</li>
             <li>Design that prioritizes safety and legibility</li>
           </ul>
         </div>
@@ -222,7 +230,7 @@
       </div>
     </section>
 
-    <!-- ---------- Sitemap placeholder ---------- -->
+    <!-- ---------- Sitemap ---------- -->
     <section id="sitemap" class="doc-section">
       <h2 class="section-title">Sitemap</h2>
       <p>Below is a placeholder for the Gloomaps sitemap. Replace the image with your exported sitemap PDF or PNG.</p>
@@ -256,7 +264,9 @@
 
     <section id="contact" class="doc-section small">
       <h2 class="section-title">Contact</h2>
-      <p>If you need files placed or adjustments for GitHub/Netlify deployment, email: <a href="mailto:triston.lacroix@example.com">triston.lacroix@example.com</a></p>
+      <p>If you need files placed or adjustments for GitHub/Netlify deployment, email:
+        <a href="mailto:triston.lacroix@example.com">triston.lacroix@example.com</a>
+      </p>
     </section>
 
   </main>
@@ -267,9 +277,9 @@
       <div>Built with HTML &amp; CSS — Flexbox &amp; Grid</div>
     </div>
   </footer>
-
 </body>
 </html>
+
 
 
 

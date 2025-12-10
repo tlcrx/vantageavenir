@@ -1,219 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Triston LaCroix - Music</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music — Smart Infotainment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #181818;
-      color: #fff;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-    }
-
-    .back-btn {
-      color: #06b6d4;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-
-    .player, .queue, .playlists {
-      background-color: #1f1f1f;
-      border: 2px solid #333;
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .player {
-      grid-column: 1 / 2;
-      align-items: center;
-      text-align: center;
-    }
-
-    .album-cover {
-      width: 100%;
-      padding-top: 100%;
-      background-color: #2c2c2c;
-      border: 2px dashed #555;
-      border-radius: 12px;
-      position: relative;
-    }
-
-    .track-info {
-      margin-top: 10px;
-    }
-
-    .track-info h2 {
-      margin: 5px 0;
-      font-size: 1.2rem;
-    }
-
-    .track-info span {
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    .controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .controls button {
-      background-color: #06b6d4;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .controls button:hover {
-      background-color: #0bcce3;
-    }
-
-    .slider {
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .queue, .playlists {
-      grid-column: auto;
-      gap: 10px;
-    }
-
-    .queue h3, .playlists h3 {
-      color: #aaa;
-      font-size: 0.8rem;
-      margin-bottom: 5px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .queue-item, .playlist-item {
-      background-color: #2c2c2c;
-      padding: 10px;
-      border-radius: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .queue-item:hover, .playlist-item:hover {
-      border: 1px solid #06b6d4;
-    }
-
-    .queue-item span, .playlist-item span {
-      font-size: 0.85rem;
-      color: #aaa;
-    }
-
-    .highlight {
-      border: 1px solid #06b6d4;
-    }
-  </style>
 </head>
-<body>
-  <div class="container">
-    <a href="index.html" class="back-btn">← Music Library</a>
+<body id="top">
+  <!-- same header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#top">
+        <svg class="logo" width="36" height="36" viewBox="0 0 24 24" aria-hidden>
+          <rect width="24" height="24" rx="5" fill="#072f2a"></rect>
+          <circle cx="7" cy="7" r="2.2" fill="#06b6d4"></circle>
+        </svg>
+        <div class="brand-text">
+          <h1>Smart Infotainment</h1>
+          <p class="byline">Prototype &amp; Wireframes — Triston LaCroix</p>
+        </div>
+      </a>
 
-    <!-- Player -->
-    <div class="player">
-      <div class="album-cover"></div>
-      <div class="track-info">
-        <h2>No Tears Left to Cry</h2>
-        <span>Ariana Grande • Sweetener</span>
-      </div>
-
-      <input type="range" min="0" max="100" value="30" class="slider">
-
-      <div class="controls">
-        <button>⏮</button>
-        <button>⏯</button>
-        <button>⏭</button>
-      </div>
-
-      <input type="range" min="0" max="100" value="65" class="slider">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html#homescreen">Homescreen</a>
+        <a class="nav-link" href="index.html#creative-brief">Creative Brief</a>
+        <a class="nav-link" href="index.html#sitemap">Sitemap</a>
+        <a class="nav-link" href="index.html#wireframes">Wireframes</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Queue -->
-    <div class="queue">
-      <h3>Up Next</h3>
-      <div class="queue-item highlight">
-        <span>No Tears Left to Cry</span>
-        <span>3:25</span>
+  <main class="container">
+    <section class="panel-section">
+      <h2 class="section-title">Music Library</h2>
+
+      <div class="infotainment-frame music-layout">
+        <!-- Left: big player -->
+        <article class="card music-now">
+          <header class="music-header">
+            <span class="pill">Now Playing</span>
+            <span class="music-context">Driver Profile • Road Trip Mix</span>
+          </header>
+
+          <div class="music-artwork">
+            <div class="artwork-box">
+              <div class="artwork-inner">
+                <span class="artwork-label">Album Cover</span>
+                <span class="artwork-album">Sweetener</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="music-track-meta">
+            <h3 class="song-title">No Tears Left to Cry</h3>
+            <p class="song-artist">Ariana Grande — Sweetener</p>
+          </div>
+
+          <div class="music-timeline">
+            <span class="time">1:02</span>
+            <div class="timeline-bar">
+              <div class="timeline-fill" style="width:35%"></div>
+            </div>
+            <span class="time">3:25</span>
+          </div>
+
+          <div class="music-controls">
+            <button class="icon-btn">♡</button>
+            <button class="icon-btn">⏮</button>
+            <button class="icon-btn primary">⏸</button>
+            <button class="icon-btn">⏭</button>
+            <button class="icon-btn">⤾</button>
+          </div>
+
+          <div class="music-volume">
+            <span class="time">Volume</span>
+            <div class="timeline-bar">
+              <div class="timeline-fill" style="width:65%"></div>
+            </div>
+            <span class="time">65%</span>
+          </div>
+        </article>
+
+        <!-- Middle: Up Next -->
+        <section class="card music-queue">
+          <header class="music-header">
+            <h3 class="card-title">Up Next</h3>
+          </header>
+
+          <ul class="queue-list">
+            <li class="queue-item active">
+              <div>
+                <div class="queue-title">No Tears Left to Cry</div>
+                <div class="queue-meta">Ariana Grande</div>
+              </div>
+              <span class="queue-time">3:25</span>
+            </li>
+            <li class="queue-item">
+              <div>
+                <div class="queue-title">Thank U, Next</div>
+                <div class="queue-meta">Ariana Grande</div>
+              </div>
+              <span class="queue-time">3:27</span>
+            </li>
+            <li class="queue-item">
+              <div>
+                <div class="queue-title">7 Rings</div>
+                <div class="queue-meta">Ariana Grande</div>
+              </div>
+              <span class="queue-time">2:58</span>
+            </li>
+            <li class="queue-item">
+              <div>
+                <div class="queue-title">Break Up With Your Girlfriend</div>
+                <div class="queue-meta">Ariana Grande</div>
+              </div>
+              <span class="queue-time">3:10</span>
+            </li>
+            <li class="queue-item">
+              <div>
+                <div class="queue-title">Breathin</div>
+                <div class="queue-meta">Ariana Grande</div>
+              </div>
+              <span class="queue-time">3:18</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-outline full-width">View Full Queue</button>
+        </section>
+
+        <!-- Right: Playlists + stats -->
+        <aside class="card music-side">
+          <h3 class="card-title">My Playlists</h3>
+          <div class="playlist-list">
+            <button class="playlist-pill">
+              <span>Road Trip Hits</span>
+              <span class="playlist-meta">42 tracks</span>
+            </button>
+            <button class="playlist-pill">
+              <span>Night Drive</span>
+              <span class="playlist-meta">28 tracks</span>
+            </button>
+            <button class="playlist-pill">
+              <span>Pop Favorites</span>
+              <span class="playlist-meta">156 tracks</span>
+            </button>
+            <button class="playlist-pill">
+              <span>Chill Vibes</span>
+              <span class="playlist-meta">73 tracks</span>
+            </button>
+          </div>
+
+          <button class="btn btn-outline full-width small">Create New Playlist</button>
+
+          <div class="library-stats">
+            <h4>Library Stats</h4>
+            <p>Total Songs <span>1,247</span></p>
+            <p>Total Artists <span>342</span></p>
+            <p>Total Albums <span>156</span></p>
+            <p>Storage Used <span>8.2 GB</span></p>
+          </div>
+        </aside>
       </div>
-      <div class="queue-item">
-        <span>Thank U, Next</span>
-        <span>3:27</span>
+
+      <!-- bottom app nav -->
+      <div class="bottom-nav">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="navigate.html" class="nav-btn">Navigate</a>
+        <a href="music.html" class="nav-btn active">Music</a>
+        <a href="phone.html" class="nav-btn">Phone</a>
+        <a href="messages.html" class="nav-btn">Messages</a>
+        <a href="media.html" class="nav-btn">Media</a>
+        <a href="calendar.html" class="nav-btn">Calendar</a>
       </div>
-      <div class="queue-item">
-        <span>7 Rings</span>
-        <span>2:58</span>
-      </div>
-      <div class="queue-item">
-        <span>Break Up With Your Girlfriend</span>
-        <span>3:10</span>
-      </div>
-      <div class="queue-item">
-        <span>Breathin</span>
-        <span>3:18</span>
-      </div>
-      <button style="margin-top:10px; background:none; border:1px solid #06b6d4; color:#06b6d4; padding:5px; border-radius:6px; cursor:pointer;">View Full Queue</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Triston LaCroix — Smart Infotainment</div>
+      <div>Built with HTML &amp; CSS — Flexbox &amp; Grid</div>
     </div>
-
-    <!-- Playlists -->
-    <div class="playlists">
-      <h3>My Playlists</h3>
-      <div class="playlist-item">
-        <span>Road Trip Hits</span>
-        <span>42 tracks</span>
-      </div>
-      <div class="playlist-item">
-        <span>Night Drive</span>
-        <span>28 tracks</span>
-      </div>
-      <div class="playlist-item">
-        <span>Pop Favorites</span>
-        <span>156 tracks</span>
-      </div>
-      <div class="playlist-item">
-        <span>Chill Vibes</span>
-        <span>73 tracks</span>
-      </div>
-      <button style="margin-top:10px; background:none; border:1px solid #06b6d4; color:#06b6d4; padding:5px; border-radius:6px; cursor:pointer;">Create New Playlist</button>
-
-      <div style="margin-top:20px; font-size:0.8rem; color:#aaa;">
-        <p>Total Songs: 1,247</p>
-        <p>Total Artists: 342</p>
-        <p>Total Albums: 156</p>
-        <p>Storage Used: 8.2 GB</p>
-      </div>
-    </div>
-  </div>
+  </footer>
 </body>
 </html>
+
