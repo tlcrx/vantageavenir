@@ -1,91 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Infotainment – Final Project</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Infotainment — Triston LaCroix</title>
+
+  <!-- Google Fonts (Webfonts Helper recommended: download and include locally if required by professor) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <h1>Smart Infotainment</h1>
-    <nav class="nav">
-      <ul>
-        <li><a href="#intro">Home</a></li>
-        <li><a href="#creative-brief">Creative Brief</a></li>
-        <li><a href="#sitemap">Sitemap</a></li>
-        <li><a href="#wireframes">Wireframes</a></li>
-      </ul>
-    </nav>
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <!-- Small square logo -->
+        <svg class="logo" width="36" height="36" viewBox="0 0 24 24" aria-hidden>
+          <rect width="24" height="24" rx="5" fill="#072f2a"></rect>
+          <circle cx="7" cy="7" r="2.2" fill="#06b6d4"></circle>
+        </svg>
+        <div class="brand-text">
+          <h1>Smart Infotainment</h1>
+          <p class="byline">Prototype &amp; Wireframes — Triston LaCroix</p>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#homescreen">Homescreen</a>
+        <a class="nav-link" href="#creative-brief">Creative Brief</a>
+        <a class="nav-link" href="#sitemap">Sitemap</a>
+        <a class="nav-link" href="#wireframes">Wireframes</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="intro" class="intro-section fade-in">
-    <h2>Welcome</h2>
-    <p>
-      Smart Infotainment is a conceptual platform blending intelligent content delivery 
-      with highly intuitive user experience design. Built for modern users, it focuses 
-      on simplicity, personalization, and seamless interaction.
-    </p>
-  </section>
+  <main class="container">
+    <!-- ---------- Infotainment homescreen mockup ---------- -->
+    <section id="homescreen" class="panel-section">
+      <h2 class="section-title">Homescreen Wireframe (Desktop Preview)</h2>
 
-  <section id="creative-brief" class="content-section fade-in">
-    <h2>Creative Brief</h2>
+      <div class="infotainment-frame" role="img" aria-label="Smart Infotainment homescreen preview">
+        <!-- Top bar -->
+        <div class="topbar">
+          <div class="top-left">
+            <!-- Home icon (SVG) -->
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path fill="#06b6d4" d="M12 3l8 7v10a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1V10z"/></svg>
+            <span class="top-title">Home</span>
+          </div>
 
-    <h3>Problem</h3>
-    <p>
-      Users struggle to navigate overwhelming digital information systems that lack 
-      personalization, accessibility, and clarity.
-    </p>
+          <div class="top-center">
+            <span class="status">Connected</span>
+            <span class="date">Wednesday, Dec 10</span>
+            <span class="time">10:08 AM</span>
+          </div>
 
-    <h3>Audience</h3>
-    <p>
-      Tech‑savvy individuals, young adults, and professionals seeking intuitive, fast, 
-      and personalized infotainment systems.
-    </p>
+          <div class="top-right">
+            <!-- User / Settings / Search icons -->
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path fill="#9ca3af" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM3 21a9 9 0 1 1 18 0H3z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path fill="#9ca3af" d="M12 8a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 8zm8 11H4v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z"/></svg>
+          </div>
+        </div>
 
-    <h3>Competition</h3>
-    <p>
-      Traditional streaming dashboards, news apps, and entertainment hubs offering 
-      fragmented user experiences.
-    </p>
+        <!-- Main grid: 3 columns -->
+        <div class="infotainment-grid">
+          <!-- Left column: Vehicle status -->
+          <article class="card column-left">
+            <h3 class="card-title">Vehicle Status</h3>
 
-    <h3>Key Messages</h3>
-    <p>
-      Smart Infotainment prioritizes simplicity, personalization, and a frictionless UI 
-      to create a cohesive and enjoyable information ecosystem.
-    </p>
+            <div class="speed-vis">
+              <!-- simple SVG arc + needle as visual placeholder -->
+              <svg viewBox="0 0 180 140" class="speedo" aria-hidden>
+                <path d="M30 120 A70 70 0 1 1 150 120" fill="none" stroke="#364251" stroke-width="2" stroke-linecap="round"/>
+                <line x1="90" y1="120" x2="135" y2="60" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="90" cy="120" r="5" fill="#06b6d4"/>
+                <text x="90" y="100" text-anchor="middle" font-size="28" fill="#fff">68</text>
+                <text x="90" y="116" text-anchor="middle" font-size="9" fill="#9ca3af">MPH</text>
+              </svg>
+            </div>
 
-    <h3>Call to Action</h3>
-    <p>
-      Explore the platform, test interactive features, and give feedback to improve the 
-      next iteration.
-    </p>
+            <div class="status-grid">
+              <div class="status-item">
+                <label>Battery</label>
+                <div class="value">78%</div>
+                <div class="bar"><div class="bar-fill" style="width:78%"></div></div>
+              </div>
+              <div class="status-item">
+                <label>Range</label>
+                <div class="value">234 mi</div>
+              </div>
+            </div>
+          </article>
 
-    <h3>How to Measure Success</h3>
-    <p>
-      Increased user engagement, reduced navigation time, and consistent positive 
-      usability feedback.
-    </p>
-  </section>
+          <!-- Middle column: Quick Route / Map -->
+          <aside class="card column-mid">
+            <h3 class="card-title">Quick Route</h3>
+            <div class="mini-map" aria-hidden>
+              <!-- background grid + route path -->
+              <svg viewBox="0 0 320 200" class="minimap-svg">
+                <defs>
+                  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M20 0 L0 0 0 20" fill="none" stroke="#3f3f46" stroke-width="0.3" opacity="0.35"/>
+                  </pattern>
+                </defs>
+                <rect width="320" height="200" fill="url(#grid)"/>
+                <path d="M40 160 Q120 120 200 100 T300 80" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="40" cy="160" r="4" fill="#06b6d4"/><circle cx="300" cy="80" r="4" fill="#06b6d4"/>
+              </svg>
+            </div>
 
-  <section id="sitemap" class="content-section fade-in">
-    <h2>Sitemap</h2>
-    <p>Below is the sitemap created for Assignment 4:</p>
-    <img src="images/sitemap.png" alt="Sitemap" class="content-image" />
-  </section>
+            <div class="route-info">
+              <div class="dest">Home — 2847 Oak Street</div>
+              <div class="meta-grid">
+                <div class="meta">ETA<br><strong>12:45</strong></div>
+                <div class="meta">Distance<br><strong>18 mi</strong></div>
+                <div class="meta">Time<br><strong>25 min</strong></div>
+              </div>
+            </div>
 
-  <section id="wireframes" class="content-section fade-in">
-    <h2>Wireframes</h2>
-    <p>Homepage and 3 sub‑pages wireframes:</p>
-    <img src="images/wireframe1.png" alt="Wireframe 1" class="content-image" />
-    <img src="images/wireframe2.png" alt="Wireframe 2" class="content-image" />
-    <img src="images/wireframe3.png" alt="Wireframe 3" class="content-image" />
-    <img src="images/wireframe4.png" alt="Wireframe 4" class="content-image" />
-  </section>
+            <button class="btn btn-outline">Open Navigation</button>
+          </aside>
+
+          <!-- Right column: Climate + Media -->
+          <article class="card column-right">
+            <h3 class="card-title">Climate</h3>
+            <div class="climate-row">
+              <div class="temp">
+                <div class="temp-value">72°</div>
+                <div class="temp-label">Interior</div>
+              </div>
+              <div class="climate-controls">
+                <button class="round-btn">❆</button>
+                <button class="round-btn">💧</button>
+              </div>
+            </div>
+
+            <h3 class="card-title small">Now Playing</h3>
+            <div class="nowplaying">
+              <div class="cover">♫</div>
+              <div class="now-meta">
+                <div class="song">No Tears Left to Cry</div>
+                <div class="artist">Ariana Grande</div>
+              </div>
+              <button class="round-btn play">▮▮</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Shortcuts + Notifications Row -->
+        <div class="short-row">
+          <div class="shortcuts">
+            <button class="shortcut">Navigate</button>
+            <button class="shortcut">Music</button>
+            <button class="shortcut">Phone</button>
+            <button class="shortcut">Messages</button>
+            <button class="shortcut">Media</button>
+            <button class="shortcut">Calendar</button>
+          </div>
+
+          <div class="notifications card">
+            <div class="not-head">Notifications <span class="badge">3</span></div>
+            <ul class="not-list">
+              <li>Traffic ahead on I-90 — 5 min</li>
+              <li>New message from Sarah</li>
+              <li>Next service in 2,400 miles</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom navigation -->
+        <div class="bottom-nav">
+          <button class="nav-btn active">Home</button>
+          <button class="nav-btn">Navigate</button>
+          <button class="nav-btn">Media</button>
+          <button class="nav-btn">Phone</button>
+          <button class="nav-btn">Climate</button>
+          <button class="nav-btn">Vehicle</button>
+          <button class="nav-btn">Settings</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Creative brief (academic) ---------- -->
+    <section id="creative-brief" class="doc-section">
+      <h2 class="section-title">Creative Brief — Smart Infotainment</h2>
+
+      <div class="brief-grid">
+        <div>
+          <h3>Problem</h3>
+          <p>Drivers need a safe, intuitive in-vehicle interface that combines essential vehicle telemetry, navigation, and media controls with minimal cognitive load. Current systems often overload the user with micro-interactions and inconsistent visual language, increasing distraction risk.</p>
+        </div>
+
+        <div>
+          <h3>Audience</h3>
+          <p>Primary users are tech-savvy drivers aged 25–55 purchasing mid-to-high-end vehicles; they expect seamless smartphone integration, clear vehicle status, and quick access to navigation and media while minimizing distraction.</p>
+        </div>
+
+        <div>
+          <h3>Competition</h3>
+          <p>Competitors include established OEM infotainment platforms and third-party solutions (e.g., Android Auto, Apple CarPlay, OEM UIs). Our approach emphasizes minimal visual noise, clear hierarchy, and fast access to core actions.</p>
+        </div>
+
+        <div>
+          <h3>Key Messages</h3>
+          <ul>
+            <li>Clear vehicle insight at a glance</li>
+            <li>Quick access to navigation & media</li>
+            <li>Design that prioritizes safety and legibility</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Call to Action</h3>
+          <p>Encourage test drives, prototype demonstrations, and pilot installations with partner OEMs.</p>
+        </div>
+
+        <div>
+          <h3>How to Measure Success</h3>
+          <p>Metrics: task completion time for common tasks, driver glance duration, usability SUS scores, and pilot adoption/feedback from partner fleets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Sitemap placeholder ---------- -->
+    <section id="sitemap" class="doc-section">
+      <h2 class="section-title">Sitemap</h2>
+      <p>Below is a placeholder for the Gloomaps sitemap. Replace the image with your exported sitemap PDF or PNG.</p>
+      <div class="asset-box">
+        <img src="images/sitemap.png" alt="Sitemap placeholder" class="asset-image">
+      </div>
+    </section>
+
+    <!-- ---------- Wireframes ---------- -->
+    <section id="wireframes" class="doc-section">
+      <h2 class="section-title">Wireframes</h2>
+      <p>Homescreen wireframe (desktop preview) plus links to mobile wireframes. Replace these with your exported images from Figma.</p>
+
+      <div class="wire-grid">
+        <figure>
+          <img src="images/homescreen.png" alt="Homescreen wireframe preview">
+          <figcaption>Homescreen — desktop (primary screen)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/wire-mobile-1.png" alt="Wireframe mobile 1">
+          <figcaption>Mobile — Home</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/wire-mobile-2.png" alt="Wireframe mobile 2">
+          <figcaption>Mobile — Navigation</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contact" class="doc-section small">
+      <h2 class="section-title">Contact</h2>
+      <p>If you need files placed or adjustments for GitHub/Netlify deployment, email: <a href="mailto:triston.lacroix@example.com">triston.lacroix@example.com</a></p>
+    </section>
+
+  </main>
 
   <footer class="site-footer">
-    <p>© 2025 Smart Infotainment – Final Project</p>
+    <div class="container footer-inner">
+      <div>© 2025 Triston LaCroix — Smart Infotainment</div>
+      <div>Built with HTML &amp; CSS — Flexbox &amp; Grid</div>
+    </div>
   </footer>
+
 </body>
 </html>
+
+
 
