@@ -1136,4 +1136,112 @@ body{
   border-style: dashed;
   color: #9ca3af;
 }
+/* ==============================
+   Smart Infotainment — Messages
+   
+   ============================== */
+
+:root {
+  --bg: #0b0f14;
+  --panel: #131920;
+  --border: #1f2937;
+  --text: #d1d5db;
+  --muted: #94a3b8;
+  --accent: #06b6d4;
+
+  /* Fluid Type Scale */
+  --fs-sm: clamp(0.75rem, 0.6vw + 0.5rem, 0.9rem);
+  --fs-base: clamp(1rem, 1vw + 0.25rem, 1.25rem);
+  --fs-lg: clamp(1.25rem, 1vw + 0.5rem, 1.75rem);
+  --fs-xl: clamp(1.75rem, 2vw + 0.5rem, 2.5rem);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.messages-wrapper {
+  width: 100%;
+  max-width: 900px;
+  background: var(--panel);
+  padding: 32px;
+  border-radius: 20px;
+  border: 2px solid var(--border);
+}
+
+/* Title */
+.messages-title {
+  font-size: var(--fs-xl);
+  margin-bottom: 24px;
+  color: white;
+  text-align: center;
+}
+
+/* Conversation Layout */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Message Card */
+.chat-card {
+  background: #0f141b;
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  border-radius: 12px;
+  transition: border 0.2s, transform 0.2s;
+}
+
+.chat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.chat-name {
+  font-size: var(--fs-base);
+  color: var(--accent);
+}
+
+.chat-time {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.chat-preview {
+  font-size: var(--fs-sm);
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 20px;
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--accent);
+  color: #0b0f14;
+}
 
