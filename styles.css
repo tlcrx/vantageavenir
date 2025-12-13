@@ -1137,6 +1137,58 @@ body{
   color: #9ca3af;
 }
 
+/* ===============================
+   Wireframe Hover + Lightbox
+   =============================== */
+
+/* Hover animation */
+.wire-grid img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.wire-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Lightbox container */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 8, 12, 0.88);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 9999;
+}
+
+.lightbox.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Lightbox image */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  animation: lbFadeIn .3s ease;
+}
+
+/* Smooth appearing animation */
+@keyframes lbFadeIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
 
 
 
