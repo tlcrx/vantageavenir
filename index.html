@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Smart Infotainment — Triston LaCroix</title>
 
-  <!--  -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
@@ -14,7 +14,6 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top">
-        <!-- Small square logo -->
         <svg class="logo" width="36" height="36" viewBox="0 0 24 24" aria-hidden>
           <rect width="24" height="24" rx="5" fill="#072f2a"></rect>
           <circle cx="7" cy="7" r="2.2" fill="#06b6d4"></circle>
@@ -36,49 +35,39 @@
   </header>
 
   <main class="container">
-    <!-- ---------- Infotainment homescreen mockup ---------- -->
+
+    <!-- ===================== HOMESCREEN ===================== -->
     <section id="homescreen" class="panel-section">
       <h2 class="section-title">Homescreen Wireframe (Desktop Preview)</h2>
 
-      <div class="infotainment-frame" role="img" aria-label="Smart Infotainment homescreen preview">
+      <div class="infotainment-frame">
+
         <!-- Top bar -->
         <div class="topbar">
           <div class="top-left">
-            <!-- Home icon -->
-            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden>
-              <path fill="#06b6d4" d="M12 3l8 7v10a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1V10z"/>
-            </svg>
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18"><path fill="#06b6d4" d="M12 3l8 7v10a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1V10z"/></svg>
             <span class="top-title">Home</span>
           </div>
-
           <div class="top-center">
             <span class="status">Connected</span>
             <span class="date">Wednesday, Dec 10</span>
             <span class="time">10:08 AM</span>
           </div>
-
           <div class="top-right">
-            <!-- User / Settings icons -->
-            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden>
-              <path fill="#9ca3af" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM3 21a9 9 0 1 1 18 0H3z"/>
-            </svg>
-            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden>
-              <path fill="#9ca3af" d="M12 8a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 8zm8 11H4v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z"/>
-            </svg>
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18"><path fill="#9ca3af" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM3 21a9 9 0 1 1 18 0H3z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18"><path fill="#9ca3af" d="M12 8a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 8zm8 11H4v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z"/></svg>
           </div>
         </div>
 
-        <!-- Main grid: 3 columns -->
+        <!-- 3-column main grid -->
         <div class="infotainment-grid">
-          <!-- Left column: Vehicle status -->
+          <!-- Left -->
           <article class="card column-left">
             <h3 class="card-title">Vehicle Status</h3>
-
             <div class="speed-vis">
-              
-              <svg viewBox="0 0 180 140" class="speedo" aria-hidden>
-                <path d="M30 120 A70 70 0 1 1 150 120" fill="none" stroke="#364251" stroke-width="2" stroke-linecap="round"/>
-                <line x1="90" y1="120" x2="135" y2="60" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+              <svg viewBox="0 0 180 140" class="speedo">
+                <path d="M30 120 A70 70 0 1 1 150 120" fill="none" stroke="#364251" stroke-width="2"/>
+                <line x1="90" y1="120" x2="135" y2="60" stroke="#06b6d4" stroke-width="3"/>
                 <circle cx="90" cy="120" r="5" fill="#06b6d4"/>
                 <text x="90" y="100" text-anchor="middle" font-size="28" fill="#fff">68</text>
                 <text x="90" y="116" text-anchor="middle" font-size="9" fill="#9ca3af">MPH</text>
@@ -98,11 +87,10 @@
             </div>
           </article>
 
-          <!-- Middle column: Quick Route / Map -->
+          <!-- Middle -->
           <aside class="card column-mid">
             <h3 class="card-title">Quick Route</h3>
-            <div class="mini-map" aria-hidden>
-              <!-- background grid + route path -->
+            <div class="mini-map">
               <svg viewBox="0 0 320 200" class="minimap-svg">
                 <defs>
                   <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -110,7 +98,7 @@
                   </pattern>
                 </defs>
                 <rect width="320" height="200" fill="url(#grid)"/>
-                <path d="M40 160 Q120 120 200 100 T300 80" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+                <path d="M40 160 Q120 120 200 100 T300 80" fill="none" stroke="#06b6d4" stroke-width="2"/>
                 <circle cx="40" cy="160" r="4" fill="#06b6d4"/>
                 <circle cx="300" cy="80" r="4" fill="#06b6d4"/>
               </svg>
@@ -128,7 +116,7 @@
             <button class="btn btn-outline">Open Navigation</button>
           </aside>
 
-          <!-- Right column: Climate + Media -->
+          <!-- Right -->
           <article class="card column-right">
             <h3 class="card-title">Climate</h3>
             <div class="climate-row">
@@ -154,10 +142,9 @@
           </article>
         </div>
 
-       
+        <!-- Shortcuts -->
         <div class="short-row">
           <div class="shortcuts">
-           
             <a href="navigate.html" class="shortcut">Navigate</a>
             <a href="music.html" class="shortcut">Music</a>
             <a href="phone.html" class="shortcut">Phone</a>
@@ -173,7 +160,7 @@
           </div>
         </div>
 
-      
+        <!-- Bottom Nav -->
         <div class="bottom-nav">
           <a href="index.html" class="nav-btn active">Home</a>
           <a href="navigate.html" class="nav-btn">Navigate</a>
@@ -183,90 +170,77 @@
       </div>
     </section>
 
-    
+    <!-- ===================== CREATIVE BRIEF ===================== -->
     <section id="creative-brief" class="doc-section">
       <h2 class="section-title">Creative Brief — Smart Infotainment</h2>
-
       <div class="brief-grid">
         <div>
           <h3>Problem</h3>
-          <p>Drivers need a safe, intuitive in-vehicle interface that combines essential vehicle telemetry, navigation, and media controls with minimal cognitive load. Current systems often overload the user with micro-interactions and inconsistent visual language, increasing distraction risk.</p>
+          <p>Drivers need a safe, intuitive in-vehicle interface...</p>
         </div>
-
         <div>
           <h3>Audience</h3>
-          <p>Primary users are tech-savvy drivers aged 25–55 purchasing mid-to-high-end vehicles; they expect seamless smartphone integration, clear vehicle status, and quick access to navigation and media while minimizing distraction.</p>
+          <p>Primary users are tech-savvy drivers aged 25–55...</p>
         </div>
-
         <div>
           <h3>Competition</h3>
-          <p>Competitors include established OEM infotainment platforms and third-party solutions (e.g., Android Auto, Apple CarPlay, OEM UIs). Our approach emphasizes minimal visual noise, clear hierarchy, and fast access to core actions.</p>
+          <p>Competitors include OEM platforms, CarPlay, Android Auto...</p>
         </div>
-
         <div>
           <h3>Key Messages</h3>
           <ul>
-            <li>Clear vehicle insight at a glance</li>
-            <li>Quick access to navigation &amp; media</li>
-            <li>Design that prioritizes safety and legibility</li>
+            <li>Clear vehicle insight</li>
+            <li>Quick navigation & media access</li>
+            <li>Safety-first layout</li>
           </ul>
         </div>
-
         <div>
           <h3>Call to Action</h3>
-          <p>Encourage test drives, prototype demonstrations, and pilot installations with partner OEMs.</p>
+          <p>Encourage prototype testing...</p>
         </div>
-
         <div>
           <h3>How to Measure Success</h3>
-          <p>Metrics: task completion time for common tasks, driver glance duration, usability SUS scores, and pilot adoption/feedback from partner fleets.</p>
+          <p>Task time, glance time, SUS scores...</p>
         </div>
       </div>
     </section>
 
-    <!-- ---------- Sitemap ---------- -->
+    <!-- ===================== SITEMAP ===================== -->
     <section id="sitemap" class="doc-section">
       <h2 class="section-title">Sitemap</h2>
-      <p>The sitemap divides the platform into six sections that include Features and Modern Tech Issues and Updates and Support and About and Navigation. The document contains specific subcategories within each section which focus on tech issues that handle sensor malfunctions and screen malfunctions and false alarm occurrences and updates that include software updates and patch notes and upcoming system enhancements. The system provides warranty information through its Support section and enables users to access live chat and features such as maps and voice commands and smartphone connection through its Navigation system...</p>
+      <p>The sitemap divides the platform into sections...</p>
       <div class="asset-box">
-        <img src="images/Sitempap.png" alt="Sitemap placeholder" class="asset-image">
+        <img src="images/Sitempap.png" alt="Sitemap">
       </div>
     </section>
 
-    <!-- ---------- Wireframes ---------- -->
+    <!-- ===================== WIREFRAMES ===================== -->
     <section id="wireframes" class="doc-section">
       <h2 class="section-title">Wireframes</h2>
-      <p>The Smart Infotainment system wireframes define its fundamental design structure which represents the first stage of user requirements transformation into visual screen elements. The design of each layout aims to minimize mental effort while providing drivers with immediate access to their essential driving functions.
-
-The Music screen focuses on simplicity through its design which includes big controls and organized structure and simple queue system to enable users perform tasks efficiently.
-The Home screen functions as the system control center which unites vehicle information with navigation and climate control and notification display into one easily viewable dashboard.
-The Phone screen provides a basic call interface to drivers which includes recent contacts and a simple dial pad arrangement.
-
-The design process begins with these wireframes which convert research findings into an operational system which drivers can use to create the base for the upcoming high-fidelity prototype. .</p>
+      <p>The wireframes show the conceptual foundation...</p>
 
       <div class="wire-grid">
         <figure>
-          <img src="images/Screenshot 2025-12-09 200935.png" alt="Homescreen wireframe preview">
-          <figcaption>Music — infotainment menu (music screen)</figcaption>
+          <img src="images/Screenshot 2025-12-09 200935.png" alt="">
+          <figcaption>Music Screen</figcaption>
         </figure>
 
         <figure>
-          <img src="images/Screenshot 2025-12-09 211537.png" alt="Wireframe mobile 1">
-          <figcaption>Home — Main infotainment menu (Main Screen)</figcaption>
+          <img src="images/Screenshot 2025-12-09 211537.png" alt="">
+          <figcaption>Main Home Screen</figcaption>
         </figure>
 
         <figure>
-          <img src="images/Screenshot 2025-12-12 230143.png" alt="Wireframe mobile 2">
-          <figcaption>Mobile — Phone infotainment menu (Phone Screen and Dail)</figcaption>
+          <img src="images/Screenshot 2025-12-12 230143.png" alt="">
+          <figcaption>Phone Screen</figcaption>
         </figure>
       </div>
     </section>
 
+    <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="doc-section small">
       <h2 class="section-title">Contact</h2>
-      <p>E-mail:
-        <a href="mailto:triston.lacroix@example.com">triston.lacroix@example.com</a>
-      </p>
+      <p>Email: <a href="mailto:triston.lacroix@example.com">triston.lacroix@example.com</a></p>
     </section>
 
   </main>
@@ -277,106 +251,30 @@ The design process begins with these wireframes which convert research findings 
       <div>Built with HTML &amp; CSS — Flexbox &amp; Grid</div>
     </div>
   </footer>
-</body>
-</html>
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="">
+  </div>
 
-</div>
-<script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  document.querySelectorAll(".wire-grid img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.add("open");
+    document.querySelectorAll(".wire-grid img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add("open");
+      });
     });
-  });
 
-  lightbox.addEventListener("click", () => {
-    lightbox.classList.remove("open");
-  });
-</script>
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>About — Smart Infotainment</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <svg class="logo" width="36" height="36"><rect width="24" height="24" rx="5" fill="#072f2a"/></svg>
-      <div class="brand-text">
-        <h1>Smart Infotainment</h1>
-        <p class="byline">Triston LaCroix</p>
-      </div>
-    </a>
-    <nav class="nav">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="navigate.html">Navigate</a>
-      <a class="nav-link" href="music.html">Music</a>
-      <a class="nav-link" href="phone.html">Phone</a>
-      <a class="nav-link active" href="about.html">About</a>
-      <a class="nav-link" href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <section class="about-hero">
-    <h2 class="section-title">About This Project</h2>
-    <p>Smart Infotainment is a research-driven UI/UX concept built to merge safety, clarity, and modern aesthetics into one intuitive in-car experience.</p>
-  </section>
-
-  <div class="about-grid">
-    <div class="about-card">
-      <h3>Purpose</h3>
-      <p>This project was created to explore modern infotainment layouts that reduce cognitive load while providing immediate access to essential driving functions.</p>
-      <p>It emphasizes clean visual hierarchy, consistent iconography, and an adaptive layout system using grid and flexbox.</p>
-    </div>
-
-    <div class="about-card">
-      <h3>Designer — Triston LaCroix</h3>
-      <p>As a UX-focused digital designer, Triston blends practical human-centered solutions with modern aesthetic principles.</p>
-      <p>The project reflects research, iteration, and careful interface planning from wireframes to high-fidelity prototypes.</p>
-    </div>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>© 2025 Triston LaCroix</div>
-    <div>Smart Infotainment Prototype</div>
-  </div>
-</footer>
-<div id="lightbox" class="lightbox">
-  <img id="lightbox-img" src="" alt="">
-</div>
-
-<script>
-document.querySelectorAll(".wire-grid img").forEach(img => {
-  img.addEventListener("click", () => {
-    const lb = document.getElementById("lightbox");
-    const lbImg = document.getElementById("lightbox-img");
-    lbImg.src = img.src;
-    lb.classList.add("open");
-  });
-});
-
-document.getElementById("lightbox").addEventListener("click", () => {
-  document.getElementById("lightbox").classList.remove("open");
-});
-</script>
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+    });
+  </script>
 
 </body>
 </html>
+
 
 
