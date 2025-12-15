@@ -243,6 +243,24 @@ The Home screen functions as the system control center which unites vehicle info
 The Phone screen provides a basic call interface to drivers which includes recent contacts and a simple dial pad arrangement.
 
 The design process begins with these wireframes which convert research findings into an operational system which drivers can use to create the base for the upcoming high-fidelity prototype. .</p>
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+document.querySelectorAll(".wire-grid img").forEach(img => {
+  img.addEventListener("click", () => {
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightbox-img");
+    lbImg.src = img.src;
+    lb.classList.add("open");
+  });
+});
+
+document.getElementById("lightbox").addEventListener("click", () => {
+  document.getElementById("lightbox").classList.remove("open");
+});
+</script>
 
       <div class="wire-grid">
         <figure>
